@@ -2,7 +2,7 @@ Assignment 2 readme File
 
 ------------------------------------------------------------------------
 What is your name?
-
+Matthew Nyarko
 
 
 ------------------------------------------------------------------------
@@ -13,7 +13,9 @@ in the "Policies" web page (also available on armlab in the file
 and edit it as appropriate.
 
 
-
+The COS 217 Authorized Sources List (available on armlab in ~cos217/AuthorizedSourcesList)
+Official course lecture slides and precept materials
+The assigned textbook 
 ------------------------------------------------------------------------
 What unauthorized sources of information did you use to complete the
 assignment? List any unauthorized sources of information that you used
@@ -26,7 +28,7 @@ interaction, may additionally require the interaction being reported
 to the Committee on Discipline. Write "None" if you used no
 unauthorized sources of information.
 
-
+None
 
 ------------------------------------------------------------------------
 In fulfillment of the requirement from section 2.4.3 of the Academic
@@ -36,11 +38,12 @@ enter your name in the space below the following affirmation:
 This paper represents my own work in accordance with University
 regulations.
 
+Matthew Nyarko
 
 
 ------------------------------------------------------------------------
 What is your assessment of the assignment? Was it helpful? Was it fun?
-
+ It was okay, tough with midterms around the corner. 
 
 
 ------------------------------------------------------------------------
@@ -56,7 +59,7 @@ disagreements with them? Copy the splint warnings here, and express your
 disagreement after each warning. If there are no warnings, then write
 "None."
 
-
+None.
 
 ------------------------------------------------------------------------
 What warnings does critTer generate on stra.c, and what are your
@@ -64,8 +67,7 @@ disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
 
-
-
+None.
 ------------------------------------------------------------------------
 What warnings does splint generate on strp.c, and what are your
 disagreements with them? Copy the splint warnings here, and express your
@@ -96,13 +98,15 @@ disagreements with them? Copy the critTer warnings here, and express
 your disagreement after each warning. If there are no warnings, then
 write "None."
 
-
+None.
 
 ------------------------------------------------------------------------
 Is it possible for Str_copy or Str_concat to call assert to verify
 that the destination memory area specified by the caller is large
 enough? Explain.
-
+No, it's not possible in C. The functions on get a pointer to the
+destination without anysize information. These functions rely on the
+caller to provide a destination that is large enough
 
 
 ------------------------------------------------------------------------

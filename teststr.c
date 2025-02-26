@@ -1,3 +1,42 @@
+#include <stdio.h>
+#include "str.h"
+
+int main(void) {
+    char buffer[100];
+    const char *str1 = "Hello";
+    const char *str2 = "World";
+    const char *str3 = "Hello";
+    char *found;
+    size_t len;
+
+    /* Test Str_getLength */
+    len = Str_getLength(str1);
+    printf("Length of \"%s\" is %zu\n", str1, len);
+
+    /* Test Str_copy */
+    Str_copy(buffer, str1);
+    printf("After copy, buffer contains: \"%s\"\n", buffer);
+
+    /* Test Str_concat */
+    Str_concat(buffer, str2);
+    printf("After concatenation, buffer now is: \"%s\"\n", buffer);
+
+    /* Test Str_compare */
+    printf("Comparing \"%s\" and \"%s\": %d\n", str1, str3, Str_compare(str1, str3));
+    printf("Comparing \"%s\" and \"%s\": %d\n", str1, str2, Str_compare(str1, str2));
+
+    /* Test Str_search */
+    found = Str_search(buffer, "loWo");
+    if (found != NULL) {
+        printf("Found substring \"loWo\" in \"%s\" at index %ld\n", buffer, found - buffer);
+    } else {
+        printf("Substring \"loWo\" not found in \"%s\"\n", buffer);
+    }
+    
+    return 0;
+}
+
+
 /*--------------------------------------------------------------------*/
 /* teststr.c                                                          */
 /* Author: Bob Dondero                                                */
